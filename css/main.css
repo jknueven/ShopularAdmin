@@ -6,7 +6,7 @@
   color: #5AC3E8; }
 
 table {
-  width: 75%;
+  width: 50%;
   margin: auto;
   color: #B82934;
   border: 2px solid #B82934; }
@@ -28,3 +28,13 @@ table tr:nth-child(odd) {
 
 table tr:nth-child(even) {
   background-color: #caecf8; }
+
+.adminfield {
+  margin-bottom: 50px; }
+  .adminfield input {
+    display: block;
+    margin: auto;
+    margin-top: 10px; }
+  .adminfield .ng-invalid {
+    color: black;
+    background: red; }

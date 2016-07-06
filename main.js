@@ -3,7 +3,8 @@
 angular
 .module("inventoryAPP", [])
 .controller("inventoryTb",  function Inventory() {
-  this.inventory = [
+  var vm = this;
+  vm.inventory = [
       { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
       { "id": 89274, "name": "golf club", "price": 98, "quantity": 10, "color": "black", "discount": 0 },
       { "id": 64, "name": "iPhone", "price": 499, "quantity": 2, "color": "white", "discount": 0 },
@@ -17,9 +18,9 @@ angular
       { "id": 533, "name": "eggs", "price": 5, "quantity": 12, "color": "brown", "discount": 1 },
       { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
     ];
-    this.tax = 0.0575;
+    vm.tax = 0.0575;
 
-    this.isDiscounted = function(discount){
+    vm.isDiscounted = function(discount){
 
       if (discount !== 0) {
         return true;
@@ -28,5 +29,12 @@ angular
         return false;
       }
     };
+
+    vm.submitForm = function(){
+      console.log(this.form);
+      var rando = Math.floor((Math.random() * 100000) + 1); 
+      var newobj = { "id": rando, "name": vm.form.name, "price": vm.form.price, "quantity": vm.form.quantity, "color": vm.form.color, "discount": vm.form.discount };
+      vm.inventory.push(newobj);
+    }
 });
 })();

@@ -11,7 +11,7 @@ $primaryColor: #5AC3E8;
 }
 
 table {
-	width:75%;
+	width:50%;
 	//display:block;
 	margin:auto;
 	color:#B82934;
@@ -39,5 +39,18 @@ table tr:nth-child(even) {
   background-color: lighten($primaryColor,25);
 }
 
-.sale {
+.adminfield {
+	margin-bottom:50px;
+
+	input {
+	display:block;
+	margin:auto;
+	margin-top:10px;
+	}
+
+	.ng-invalid {
+    color:black;
+    background:red;
+  }
 }
+
