@@ -1,0 +1,43 @@
+$primaryColor: #5AC3E8;
+
+.Title {
+	h1 {
+		font-size: 30px;
+		font-family: Georgia, serif;
+		font-style: italic ; 
+		text-align: center;
+		color: $primaryColor;
+	}
+}
+
+table {
+	width:75%;
+	//display:block;
+	margin:auto;
+	color:#B82934;
+	border:2px solid #B82934;
+	h2 {
+		text-decoration: underline ;
+	}
+}
+
+table, td, th {
+	text-align:center;
+			border-collapse: collapse;
+			padding:5px;
+}
+
+td{
+	border-right:2px dotted grey;
+	border-left:2px dotted grey;
+	font-size:17px;
+}
+table tr:nth-child(odd) {
+  background-color: white;
+}
+table tr:nth-child(even) {
+  background-color: lighten($primaryColor,25);
+}
+
+.sale {
+}
