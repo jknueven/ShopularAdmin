@@ -11,13 +11,13 @@
 <form class="adminfield" ng-valid ng-submit="controller.submitForm()">
     <input type="text" name="name" placeholder="Item Name" ng-model="controller.form.name" required>
  
-    <input type="text" name="quantity" placeholder="Quantity" ng-model="controller.form.quantity" required>
+    <input type="number" name="quantity" placeholder="Quantity" ng-model="controller.form.quantity" required>
   
     <input type="text" name="color" placeholder="Color" ng-model="controller.form.color" required>
  
-    <input type="text" name="price" placeholder="Price" ng-model="controller.form.price" required>
+    <input type="number" name="price" placeholder="Price" ng-model="controller.form.price" required>
  
-    <input type="text" name="discount" placeholder="Discount Amount" ng-model="controller.form.discount" required>
+    <input type="number" name="discount" placeholder="Discount Amount" ng-model="controller.form.discount" required>
 
     <input type="submit" name="submit" ngclick>
   </form>
@@ -31,7 +31,7 @@
   	<td><h2>Price (with tax)</h2></td>
   	<td><h2>Sale</h2></td>
   </tr>
-  <tr ng-repeat="item in controller.inventory">
+  <tr ng-repeat="item in controller.inventory | orderBy : 'quantity'">
     <td>{{ item.name }}</td>
     <td>{{ item.quantity }}</td>
     <td>{{ item.color }}</td>

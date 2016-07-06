@@ -35,6 +35,6 @@ table tr:nth-child(even) {
     display: block;
     margin: auto;
     margin-top: 10px; }
-  .adminfield .ng-invalid {
+  .adminfield .ng-invalid.ng-dirty {
     color: black;
     background: red; }
