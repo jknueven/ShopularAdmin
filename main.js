@@ -35,6 +35,8 @@ angular
       var rando = Math.floor((Math.random() * 100000) + 1); 
       var newobj = { "id": rando, "name": vm.form.name, "price": vm.form.price, "quantity": vm.form.quantity, "color": vm.form.color, "discount": vm.form.discount };
       vm.inventory.push(newobj);
+
+      this.form = "";
     }
 });
 })();
