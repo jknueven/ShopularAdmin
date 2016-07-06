@@ -40,9 +40,7 @@ angular
     }
 
     vm.updateQ = function(item, number){
-     console.log(item);
      var taco = vm.inventory.indexOf(item);
-     console.log(number);
      vm.inventory[taco].quantity = number;
     }
 });

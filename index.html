@@ -31,9 +31,9 @@
   	<td><h2>Price (with tax)</h2></td>
   	<td><h2>Sale</h2></td>
   </tr>
-  <tr ng-repeat="item in controller.inventory | orderBy : 'quantity' track by $index">
+  <tr ng-repeat="item in controller.inventory track by $index">
     <td>{{ item.name }}</td>
-    <td><input type="number" placeholder="{{ item.quantity }}" ng-model="$parent[$index]" ng-change="controller.updateQ(item, $event)"></td>
+    <td><input type="number" placeholder="{{ item.quantity }}" ng-model="$index" ng-change="controller.updateQ(item, $index)"></td>
     <td>{{ item.color }}</td>
     <td>{{ (item.price-item.discount)*controller.tax + (item.price-item.discount)*item.quantity | currency : $ : 2 }}</td>
     <td><span ng-show="controller.isDiscounted(item.discount)"><img class="sale" src="images/sale.png"></span></td>
