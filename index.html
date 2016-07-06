@@ -35,7 +35,7 @@
     <td>{{ item.name }}</td>
     <td>{{ item.quantity }}</td>
     <td>{{ item.color }}</td>
-    <td>${{ (item.price-item.discount)*controller.tax + (item.price-item.discount)*item.quantity | number:2 }}</td>
+    <td>{{ (item.price-item.discount)*controller.tax + (item.price-item.discount)*item.quantity | currency : $ : 2 }}</td>
     <td><span ng-show="controller.isDiscounted(item.discount)"><img class="sale" src="images/sale.png"></span></td>
   </tr>
 </table>
